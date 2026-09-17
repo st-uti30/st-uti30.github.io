@@ -1,0 +1,1204 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+:root {
+
+    --bg: #f2efe8;
+
+    --panel: #fffdf8;
+
+    --ink: #172018;
+
+    --muted: #687069;
+
+    --line: #cfd4ca;
+
+    --accent: #b9ff52;
+
+    --accent2: #7e62ff;
+
+    --shadow: 7px 7px 0 #172018;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    margin: 0;
+
+    min-height: 100%;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    background: var(--bg);
+
+    color: var(--ink);
+
+}
+
+
+button {
+
+    font: inherit;
+
+    color: inherit;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+
+    height: 58px;
+
+    border-bottom: 1px solid var(--line);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 24px;
+
+    background: var(--panel);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+
+}
+
+
+.brand {
+
+    font-family: "DM Mono";
+
+    font-weight: 500;
+
+    letter-spacing: .08em;
+
+}
+
+
+.dot {
+
+    display: inline-block;
+
+    width: 10px;
+
+    height: 10px;
+
+    background: var(--accent);
+
+    border: 1px solid var(--ink);
+
+    border-radius: 50%;
+
+    margin-right: 9px;
+
+}
+
+
+.status {
+
+    display: flex;
+
+    gap: 14px;
+
+    align-items: center;
+
+    font-family: "DM Mono";
+
+    font-size: 12px;
+
+}
+
+
+.status button {
+
+    border: 1px solid var(--line);
+
+    background: transparent;
+
+    border-radius: 8px;
+
+    padding: 6px 10px;
+
+}
+
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+.desktop {
+
+    display: grid;
+
+    grid-template-columns: 235px 1fr;
+
+    min-height: calc(100vh - 98px);
+
+}
+
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+
+    border-right: 1px solid var(--line);
+
+    background: var(--panel);
+
+    padding: 26px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.profile-mini {
+
+    display: flex;
+
+    gap: 11px;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px dashed var(--line);
+
+}
+
+
+.avatar {
+
+    width: 46px;
+
+    height: 46px;
+
+    background: var(--accent);
+
+    border: 2px solid var(--ink);
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: 700;
+
+    box-shadow: 3px 3px 0 var(--ink);
+
+}
+
+
+.profile-mini h1 {
+
+    font-size: 15px;
+
+    margin: 0;
+
+}
+
+
+.profile-mini p {
+
+    font-size: 11px;
+
+    color: var(--muted);
+
+    margin: 4px 0 0;
+
+}
+
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    padding-top: 18px;
+
+    display: grid;
+
+    gap: 5px;
+
+}
+
+
+.nav-item {
+
+    border: 0;
+
+    background: transparent;
+
+    text-align: left;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+}
+
+
+.nav-item:hover,
+.nav-item.active {
+
+    background: var(--accent);
+
+    color: #172018;
+
+}
+
+
+.nav-item span {
+
+    font-family: "DM Mono";
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================
+   SIDEBAR STATUS
+========================= */
+
+.sidebar-note {
+
+    margin-top: auto;
+
+    border: 1px solid var(--line);
+
+    padding: 14px;
+
+    background: var(--bg);
+
+    display: grid;
+
+    gap: 5px;
+
+}
+
+
+.sidebar-note span {
+
+    font: 10px "DM Mono";
+
+    color: var(--muted);
+
+}
+
+
+.sidebar-note strong {
+
+    font-size: 11px;
+
+}
+
+
+.sidebar-note small {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+    line-height: 1.4;
+
+}
+
+
+
+/* =========================
+   WORKSPACE
+========================= */
+
+.workspace {
+
+    padding: 42px;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    max-width: 1120px;
+
+    margin: 0 auto 34px;
+
+}
+
+
+.eyebrow {
+
+    font: 11px "DM Mono";
+
+    letter-spacing: .12em;
+
+    color: var(--muted);
+
+    margin: 0 0 12px;
+
+}
+
+
+.hero h2 {
+
+    font-size: clamp(44px, 7vw, 86px);
+
+    line-height: .9;
+
+    margin: 0;
+
+    letter-spacing: -.07em;
+
+}
+
+
+.hero h2 span {
+
+    color: var(--accent2);
+
+}
+
+
+.typing {
+
+    font: 14px "DM Mono";
+
+    min-height: 22px;
+
+    margin: 18px 0;
+
+    color: var(--muted);
+
+}
+
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.primary,
+.secondary {
+
+    padding: 11px 15px;
+
+    border: 1px solid var(--ink);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.primary {
+
+    background: var(--accent);
+
+    box-shadow: 3px 3px 0 var(--ink);
+
+}
+
+
+.secondary {
+
+    background: var(--panel);
+
+}
+
+
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+
+    align-self: end;
+
+    min-width: 250px;
+
+    max-width: 300px;
+
+    border: 1px solid var(--ink);
+
+    background: var(--panel);
+
+    padding: 19px;
+
+    box-shadow: var(--shadow);
+
+    transform: rotate(1.5deg);
+
+}
+
+
+.card-label {
+
+    font: 10px "DM Mono";
+
+    color: var(--muted);
+
+    display: block;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero-card strong {
+
+    font-size: 18px;
+
+    display: block;
+
+    line-height: 1.1;
+
+}
+
+
+.hero-card small {
+
+    font: 10px "DM Mono";
+
+    color: var(--muted);
+
+}
+
+
+.meter {
+
+    height: 9px;
+
+    border: 1px solid var(--ink);
+
+    margin: 17px 0 8px;
+
+    padding: 1px;
+
+}
+
+
+.meter i {
+
+    display: block;
+
+    width: 78%;
+
+    height: 100%;
+
+    background: var(--accent);
+
+}
+
+
+
+/* =========================
+   WINDOWS
+========================= */
+
+.window-grid {
+
+    max-width: 1120px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr .9fr;
+
+    gap: 17px;
+
+    align-items: start;
+
+}
+
+
+.window {
+
+    border: 1px solid var(--ink);
+
+    background: var(--panel);
+
+    box-shadow: 4px 4px 0 var(--ink);
+
+    min-width: 0;
+
+}
+
+
+.window.wide {
+
+    grid-column: 1 / -1;
+
+}
+
+
+
+/* =========================
+   WINDOW HEADER
+========================= */
+
+.window-bar {
+
+    height: 34px;
+
+    background: var(--ink);
+
+    color: var(--panel);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 9px 0 12px;
+
+    font: 11px "DM Mono";
+
+}
+
+
+.window-bar button {
+
+    width: 21px;
+
+    height: 21px;
+
+    border: 1px solid #596059;
+
+    background: transparent;
+
+    color: inherit;
+
+    margin-left: 4px;
+
+    line-height: 15px;
+
+}
+
+
+
+/* =========================
+   WINDOW CONTENT
+========================= */
+
+.window-body {
+
+    padding: 18px;
+
+}
+
+
+.window-body .big {
+
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    margin-top: 0;
+
+}
+
+
+.window-body p {
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+    color: var(--muted);
+
+}
+
+
+
+/* =========================
+   CHIPS
+========================= */
+
+.chips,
+.tags {
+
+    display: flex;
+
+    gap: 6px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.chips span,
+.tags span {
+
+    font: 9px "DM Mono";
+
+    padding: 5px 7px;
+
+    border: 1px solid var(--line);
+
+    background: var(--bg);
+
+}
+
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.timeline {
+
+    display: grid;
+
+    gap: 14px;
+
+}
+
+
+.timeline-item {
+
+    border-left: 3px solid var(--accent2);
+
+    padding-left: 12px;
+
+    display: grid;
+
+    gap: 3px;
+
+}
+
+
+.timeline-item b {
+
+    font: 9px "DM Mono";
+
+    color: var(--accent2);
+
+}
+
+
+.timeline-item strong {
+
+    font-size: 12px;
+
+}
+
+
+.timeline-item span {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+}
+
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-body {
+
+    display: grid;
+
+    gap: 13px;
+
+}
+
+
+.skill {
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr 22px;
+
+    gap: 8px;
+
+    align-items: center;
+
+    font: 10px "DM Mono";
+
+}
+
+
+.skill i {
+
+    height: 10px;
+
+    border: 1px solid var(--ink);
+
+    padding: 1px;
+
+}
+
+
+.skill em {
+
+    display: block;
+
+    height: 100%;
+
+    background: var(--accent);
+
+}
+
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.project {
+
+    border: 1px solid var(--line);
+
+    padding: 15px;
+
+    min-height: 170px;
+
+    position: relative;
+
+    transition: .2s;
+
+}
+
+
+.project:hover {
+
+    border-color: var(--accent2);
+
+    transform: translateY(-2px);
+
+}
+
+
+.project-no {
+
+    font: 10px "DM Mono";
+
+    color: var(--accent2);
+
+}
+
+
+.project h3 {
+
+    font-size: 15px;
+
+    margin: 20px 0 8px;
+
+}
+
+
+.project p {
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: var(--muted);
+
+    margin-bottom: 14px;
+
+}
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-body {
+
+    display: grid;
+
+    gap: 11px;
+
+}
+
+
+.contact-body > p {
+
+    font-size: 16px !important;
+
+    color: var(--ink) !important;
+
+}
+
+
+.contact-row {
+
+    display: grid;
+
+    grid-template-columns: 65px 1fr auto;
+
+    gap: 8px;
+
+    align-items: center;
+
+    border-top: 1px dashed var(--line);
+
+    padding-top: 10px;
+
+}
+
+
+.contact-row span {
+
+    font: 9px "DM Mono";
+
+    color: var(--muted);
+
+}
+
+
+.contact-row b {
+
+    font: 10px "DM Mono";
+
+    font-weight: 400;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.contact-row button {
+
+    font: 9px "DM Mono";
+
+    border: 1px solid var(--ink);
+
+    background: var(--accent);
+
+    padding: 5px 7px;
+
+}
+
+
+.contact-body small {
+
+    font-size: 9px;
+
+    color: var(--muted);
+
+}
+
+
+
+/* =========================
+   TASKBAR
+========================= */
+
+.taskbar {
+
+    height: 40px;
+
+    border-top: 1px solid var(--line);
+
+    background: var(--panel);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 12px;
+
+    position: sticky;
+
+    bottom: 0;
+
+    z-index: 60;
+
+    font: 10px "DM Mono";
+
+}
+
+
+#startBtn {
+
+    background: var(--ink);
+
+    color: var(--panel);
+
+    border: 0;
+
+    padding: 7px 12px;
+
+    font: 10px "DM Mono";
+
+}
+
+
+#taskButtons {
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.task-btn {
+
+    border: 1px solid var(--line);
+
+    background: var(--bg);
+
+    padding: 6px 9px;
+
+    font: 9px "DM Mono";
+
+}
+
+
+.taskbar > span:last-child {
+
+    margin-left: auto;
+
+    color: var(--muted);
+
+}
+
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 60px;
+
+    background: var(--ink);
+
+    color: var(--panel);
+
+    padding: 10px 14px;
+
+    font: 10px "DM Mono";
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+    transition: .25s;
+
+    z-index: 100;
+
+}
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform: none;
+
+}
+
+
+
+/* =========================
+   SCANLINES
+========================= */
+
+.scanlines {
+
+    pointer-events: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 90;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0,0,0,.018),
+            rgba(0,0,0,.018) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    mix-blend-mode: multiply;
+
+}
+
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+
+    --bg: #111511;
+
+    --panel: #1a201a;
+
+    --ink: #eff5e9;
+
+    --muted: #a7b0a5;
+
+    --line: #394339;
+
+    --shadow: 7px 7px 0 #000;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px) {
+
+    .desktop {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .sidebar {
+
+        display: none;
+
+    }
+
+
+    .workspace {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .hero {
+
+        display: grid;
+
+    }
+
+
+    .hero-card {
+
+        justify-self: start;
+
+    }
+
+
+    .window-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .window.wide {
+
+        grid-column: auto;
+
+    }
+
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .taskbar > span:last-child {
+
+        display: none;
+
+    }
+
+}
